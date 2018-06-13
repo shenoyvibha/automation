@@ -40,7 +40,7 @@ public class baseClass {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         DesiredCapabilities cap = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        capabilities.setCapability("deviceName", "Lol");
+        capabilities.setCapability("deviceName", "Android");
         capabilities.setCapability("platformversion", "6.0.1");
         capabilities.setCapability("noReset", true);
 
