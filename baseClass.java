@@ -13,6 +13,7 @@ import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -72,6 +73,32 @@ public class baseClass {
 
     }
 
+
+
+    public MobileElement getIssueCreatorField() {
+        MobileElement issueCreatorField = (MobileElement) driver.findElement(By.id("example.com.githubissues:id/creator_name_holder"));
+        return issueCreatorField;
+    }
+
+    public MobileElement getIssueIdHolder() {
+        MobileElement issueIdHolder = (MobileElement) driver.findElement(By.id("example.com.githubissues:id/id_holder"));
+        return issueIdHolder;
+    }
+
+    public MobileElement getIssueIdNumber() {
+        MobileElement issueIdNumber = (MobileElement) driver.findElement(By.id("example.com.githubissues:id/issue_id"));
+        return issueIdNumber;
+    }
+
+    public MobileElement getIssueCreatorName() {
+        MobileElement issueCreatorName = (MobileElement) driver.findElement(By.id("example.com.githubissues:id/creator_name"));
+        return issueCreatorName;
+    }
+
+    public MobileElement getIssueTitle() {
+        MobileElement issueTitle = (MobileElement) driver.findElement(By.id("example.com.githubissues:id/title"));
+        return issueTitle;
+    }
 
     public static String getScreenShotForToast() throws MalformedURLException {
         File scrFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
